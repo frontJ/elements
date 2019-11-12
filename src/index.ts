@@ -1,4 +1,8 @@
 import { createElement } from 'frontj'
+import {
+  LoadCss,
+  LoadJs
+} from './components'
 
 const a = createElement('a')
 const abbr = createElement('abbr')
@@ -223,5 +227,8 @@ export {
   u,
   ul,
   video,
-  wbr
+  wbr,
+
+  LoadCss,
+  LoadJs
 }
