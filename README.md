@@ -1,6 +1,7 @@
 # @frontj/elements
 
-[frontJ](https://github.com/frontJ/frontJ)の`createElement`関数を様々なHTML要素に適用したものをエクスポートしたパッケージです。
+[frontJ](https://github.com/frontJ/frontJ)の`createElement`関数を様々なHTML要素に適用したものをエクスポートしたパッケージです。<br>
+いくつかの組み込みコンポーネントも含まれています。
 
 ## Install
 
@@ -20,7 +21,8 @@ import {
   h1,
   p,
   br,
-  input
+  input,
+  LoadCss
 } from '@frontj/elements'
 
 const text = (...contents) => p(
@@ -35,6 +37,7 @@ const text = (...contents) => p(
 const contents = html(
   head(
     title('frontJ example.'),
+    LoadCss('style.css')
   ),
   body(
     h1({ attrs: { class: 'heading' } }, 'Hello!'),
@@ -60,6 +63,7 @@ HTML(整形後):
 <html>
   <head>
     <title>frontJ example.</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <h1 class="heading">Hello!</h1>
@@ -68,6 +72,34 @@ HTML(整形後):
   </body>
 </html>
 ```
+
+## Documentation
+
+### Components
+
+#### `LoadCss`
+
+`` `<link rel="stylesheet" href="${path}">` ``の結果を返します。
+
+```typescript
+LoadCss(path: string): string
+```
+
+| 引数 | 説明 |
+| --- | --- |
+| path | CSSファイルへのパス。 |
+
+#### `LoadJs`
+
+`` `<script src="${path}"></script>` ``の結果を返します。
+
+```typescript
+LoadJs(path: string): string
+```
+
+| 引数 | 説明 |
+| --- | --- |
+| path | JavaScriptファイルへのパス。 |
 
 ## License
 
