@@ -24,6 +24,7 @@ import {
   input,
   LoadCss
 } from '@frontj/elements'
+import { build } from '@frontj/builder'
 
 const text = (...contents) => p(
   {
@@ -53,7 +54,11 @@ const contents = html(
   )
 )
 
-writeFileSync('index.html', contents)
+build({
+  routes: {
+    '/': contents
+  }
+})
 ```
 
 HTML(整形後):
