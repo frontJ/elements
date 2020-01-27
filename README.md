@@ -26,12 +26,7 @@ import {
 } from '@frontj/elements'
 import { build } from '@frontj/builder'
 
-const text = (...contents) => p(
-  {
-    attrs: {
-      class: 'text'
-    }
-  },
+const text = (...contents) => p.$`.text`(
   ...contents
 )
 
@@ -41,16 +36,9 @@ const contents = html(
     LoadCss('style.css')
   ),
   body(
-    h1({ attrs: { class: 'heading' } }, 'Hello!'),
+    h1.$`.heading`('Hello!'),
     text('foo', br(), 'bar'),
-    input(
-      {
-        attrs: {
-          type: 'checkbox',
-          checked: ''
-        }
-      }
-    )
+    input.$`[type="checkbox"][checked]`()
   )
 )
 
