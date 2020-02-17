@@ -1,7 +1,8 @@
 import { createElement } from 'frontj'
 import {
   LoadCss,
-  LoadJs
+  LoadJs,
+  Meta
 } from './components'
 
 const a = createElement('a')
@@ -230,5 +231,6 @@ export {
   wbr,
 
   LoadCss,
-  LoadJs
+  LoadJs,
+  Meta
 }
