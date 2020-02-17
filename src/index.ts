@@ -1,5 +1,7 @@
 import { createElement } from 'frontj'
 import {
+  AppleTouchIcon,
+  Favicon,
   LoadCss,
   LoadJs,
   Meta
@@ -230,6 +232,8 @@ export {
   video,
   wbr,
 
+  AppleTouchIcon,
+  Favicon,
   LoadCss,
   LoadJs,
   Meta

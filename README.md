@@ -23,6 +23,7 @@ import {
   br,
   input,
   Meta,
+  Favicon,
   LoadCss
 } from '@frontj/elements'
 import { build } from '@frontj/builder'
@@ -35,6 +36,7 @@ const contents = html(
   head(
     title('frontJ example.'),
     Meta({ description: 'Description' }),
+    Favicon({ href: '/favicon.ico' }),
     LoadCss('style.css')
   ),
   body(
@@ -60,6 +62,7 @@ HTML(整形後):
     <title>frontJ example.</title>
     <meta name="description" content="Description">
     <meta property="og:description" content="Description">
+    <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -73,6 +76,68 @@ HTML(整形後):
 ## Documentation
 
 ### Components
+
+#### `AppleTouchIcon`
+
+apple-touch-iconの設定がされた`link`タグを返します。
+
+```typescript
+AppleTouchIcon(params: Params): string
+```
+
+| 引数 | 説明 |
+| --- | --- |
+| params | 返す`link`タグの内容となるオブジェクト。設定項目は下記に記載しています。 |
+
+`params`の設定項目:
+
+| 項目 | 説明 |
+| --- | --- |
+| sizes | 省略可能で、`sizes`属性の値を文字列で設定します。 |
+| href | `href`属性の値を文字列で設定します。 |
+
+```typescript
+AppleTouchIcon({ sizes: '180x180', href: '/apple-touch-icon.png' })
+/*
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+*/
+
+AppleTouchIcon({ href: '/apple-touch-icon.png' })
+/*
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+*/
+```
+
+#### `Favicon`
+
+faviconの設定がされた`link`タグを返します。
+
+```typescript
+Favicon(params: Params): string
+```
+
+| 引数 | 説明 |
+| --- | --- |
+| params | 返す`link`タグの内容となるオブジェクト。設定項目は下記に記載しています。 |
+
+`params`の設定項目:
+
+| 項目 | 説明 |
+| --- | --- |
+| type | 省略可能で、`type`属性の値を文字列で設定します。 |
+| href | `href`属性の値を文字列で設定します。 |
+
+```typescript
+Favicon({ type: 'image/png', href: '/favicon.png' })
+/*
+<link rel="icon" type="image/png" href="/favicon.png">
+*/
+
+Favicon({ href: '/favicon.ico' })
+/*
+<link rel="icon" href="/favicon.ico">
+*/
+```
 
 #### `LoadCss`
 
