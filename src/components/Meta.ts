@@ -23,7 +23,7 @@ interface Options {
   includeTitleElement?: boolean;
 }
 
-export const Meta = (params: Params, options?: Options) => {
+export function Meta (params: Params, options?: Options): string {
   const _ogTitle = params.ogTitle
   const _ogDescription = params.ogDescription
   const _autoOg = options?.autoOg ?? true
