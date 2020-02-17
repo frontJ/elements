@@ -12,7 +12,6 @@ npm install -D @frontj/elements
 ## Example
 
 ```javascript
-import { writeFileSync } from 'fs'
 import {
   html,
   head,
