@@ -1,13 +1,5 @@
-import { AppleTouchIcon } from './AppleTouchIcon'
-import { Favicon } from './Favicon'
-import { LoadCss } from './LoadCss'
-import { LoadJs } from './LoadJs'
-import { Meta } from './Meta'
-
-export {
-  AppleTouchIcon,
-  Favicon,
-  LoadCss,
-  LoadJs,
-  Meta
-}
+export { AppleTouchIcon } from './AppleTouchIcon'
+export { Favicon } from './Favicon'
+export { LoadCss } from './LoadCss'
+export { LoadJs } from './LoadJs'
+export { Meta } from './Meta'
