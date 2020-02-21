@@ -7,5 +7,5 @@ interface Params {
 
 export function Favicon (params: Params): string {
   const typeAttr = params.type ? `[type="${params.type}"]` : ''
-  return link.$`[rel="icon"]${typeAttr}[href="${params.href}"]`()
+  return link`[rel="icon"]${typeAttr}[href="${params.href}"]`()
 }

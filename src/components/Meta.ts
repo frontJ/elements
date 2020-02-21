@@ -33,13 +33,13 @@ export function Meta (params: Params, options?: Options): string {
     const param = params[prop] ?? ''
 
     if (prop === 'charset') {
-      return meta.$`[charset="${param}"]`()
+      return meta`[charset="${param}"]`()
     }
 
     if (prop === 'title') {
       let metaStr = ''
       if (_autoOg && _ogTitle === undefined) {
-        metaStr += meta.$`[property="og:title"][content="${param}"]`()
+        metaStr += meta`[property="og:title"][content="${param}"]`()
       }
       if (_includeTitleElement) {
         metaStr += title(param)
@@ -48,59 +48,59 @@ export function Meta (params: Params, options?: Options): string {
     }
 
     if (prop === 'description') {
-      let metaStr = meta.$`[name="description"][content="${param}"]`()
+      let metaStr = meta`[name="description"][content="${param}"]`()
       if (_autoOg && _ogDescription === undefined) {
-        metaStr += meta.$`[property="og:description"][content="${param}"]`()
+        metaStr += meta`[property="og:description"][content="${param}"]`()
       }
       return metaStr
     }
 
     if (prop === 'viewport') {
-      return meta.$`[name="viewport"][content="${param}"]`()
+      return meta`[name="viewport"][content="${param}"]`()
     }
 
     if (prop === 'refresh') {
-      return meta.$`[http-equiv="refresh"][content="${param}"]`()
+      return meta`[http-equiv="refresh"][content="${param}"]`()
     }
 
     if (prop === 'ogTitle') {
-      return meta.$`[property="og:title"][content="${param}"]`()
+      return meta`[property="og:title"][content="${param}"]`()
     }
 
     if (prop === 'ogDescription') {
-      return meta.$`[property="og:description"][content="${param}"]`()
+      return meta`[property="og:description"][content="${param}"]`()
     }
 
     if (prop === 'ogUrl') {
-      return meta.$`[property="og:url"][content="${param}"]`()
+      return meta`[property="og:url"][content="${param}"]`()
     }
 
     if (prop === 'ogImage') {
-      return meta.$`[property="og:image"][content="${param}"]`()
+      return meta`[property="og:image"][content="${param}"]`()
     }
 
     if (prop === 'ogSiteName') {
-      return meta.$`[property="og:site_name"][content="${param}"]`()
+      return meta`[property="og:site_name"][content="${param}"]`()
     }
 
     if (prop === 'ogType') {
-      return meta.$`[property="og:type"][content="${param}"]`()
+      return meta`[property="og:type"][content="${param}"]`()
     }
 
     if (prop === 'twitterCard') {
-      return meta.$`[name="twitter:card"][content="${param}"]`()
+      return meta`[name="twitter:card"][content="${param}"]`()
     }
 
     if (prop === 'twitterSite') {
-      return meta.$`[name="twitter:site"][content="${param}"]`()
+      return meta`[name="twitter:site"][content="${param}"]`()
     }
 
     if (prop === 'twitterCreator') {
-      return meta.$`[name="twitter:creator"][content="${param}"]`()
+      return meta`[name="twitter:creator"][content="${param}"]`()
     }
 
     if (prop === 'fbAppId') {
-      return meta.$`[property="fb:app_id"][content="${param}"]`()
+      return meta`[property="fb:app_id"][content="${param}"]`()
     }
 
     return ''
