@@ -1,4 +1,5 @@
 import { meta, title } from '../index'
+import { validateMetaComponentArguments } from '../functions'
 
 interface Params {
   charset?: string;
@@ -24,6 +25,8 @@ interface Options {
 }
 
 export function Meta (params: Params, options?: Options): string {
+  validateMetaComponentArguments(params, options)
+
   const _ogTitle = params.ogTitle
   const _ogDescription = params.ogDescription
   const _autoOg = options?.autoOg ?? true
