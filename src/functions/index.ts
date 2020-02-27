@@ -1,5 +1,6 @@
 export { hasOwnProperty } from './hasOwnProperty'
 export { isArray } from './isArray'
+export { isBoolean } from './isBoolean'
 export { isNull } from './isNull'
 export { isNullable } from './isNullable'
 export { isObject } from './isObject'
