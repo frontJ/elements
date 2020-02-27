@@ -13,7 +13,7 @@
     "build:esm": "tsc --module es2015 --outDir ./dist-esm",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "prepublish": "npm run lint && npm run build"
+    "prepublish": "npm run lint && npm test && npm run build"
   },
   "husky": {
     "hooks": {
@@ -21,7 +21,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.ts": "npm run lint"
+    "src/**/*.ts": "npm run lint && npm test"
   },
   "repository": {
     "type": "git",
