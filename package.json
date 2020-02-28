@@ -55,6 +55,6 @@
     "typescript": "^3.7.5"
   },
   "dependencies": {
-    "frontj": "^0.3.0"
+    "frontj": "^0.4.0"
   }
 }
