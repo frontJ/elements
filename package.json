@@ -1,6 +1,6 @@
 {
   "name": "@frontj/elements",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "Elements for frontJ.",
   "main": "dist-cjs/index.js",
   "module": "dist-esm/index.js",
